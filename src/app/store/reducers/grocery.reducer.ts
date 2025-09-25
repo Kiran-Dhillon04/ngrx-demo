@@ -5,7 +5,7 @@ import { Grocery } from "../../../models/grocery.model";
 const initialState:Grocery[] = [
     {"id":1, "name":"Milk", "type":"fruit"},
     {"id":2, "name":"Banana", "type":"fruit"},
-    {"id":3, "name":"lays chips", "type":"snaks"},
+    {"id":3, "name":"lays chips", "type":"snacks"},
     {"id":4, "name":"doritos", "type":"snacks"},
 ]
 
