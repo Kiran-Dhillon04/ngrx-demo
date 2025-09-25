@@ -7,6 +7,7 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { groceryReducer } from './store/reducers/grocery.reducer';
 import { bucketReducer } from './store/reducers/bucket.reducer';
+import { MoviesEffects } from './store/selectors/effects/grocery.effect';
 
 
 
@@ -16,7 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideStore({groceries:groceryReducer, myBucket:bucketReducer}),
-    provideEffects(),
+    provideEffects(MoviesEffects),
     provideStoreDevtools({
        maxAge: 3, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode
